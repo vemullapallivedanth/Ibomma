@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telugu Movies</title>
+
+<style>
+
+/* ===== BODY ===== */
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:#000;
+color:white;
+}
+
+/* ===== HEADER ===== */
+header{
+background:#111;
+padding:15px 40px;
+box-shadow:0 3px 10px rgba(0,0,0,0.6);
+}
+
+.main-nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+width:100%;
+}
+
+.logo-container{
+display:flex;
+align-items:center;
+gap:10px;
+text-decoration:none;
+}
+
+.logo-container img{
+height:40px;
+width:80px;
+border-radius:60px;
+}
+
+.logo-container h1{
+background: linear-gradient(90deg, #00ff88, #00ff0d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block
+}
+
+/* ===== NAV LINKS ===== */
+.nav-links{
+list-style:none;
+display:flex;
+gap:25px;
+padding:0;
+margin:0;
+align-items:center;
+}
+
+.nav-links li{
+position:relative;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#ccc;
+font-size:14px;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#00ff88;
+}
+
+.nav-links a.active{
+color:#00ff88;
+font-weight:bold;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown-menu{
+display:none;
+position:absolute;
+top:30px;
+left:0;
+background:#111;
+list-style:none;
+padding:10px 0;
+border-radius:6px;
+min-width:130px;
+box-shadow:0 5px 15px rgba(0,0,0,0.5);
+}
+
+.dropdown:hover .dropdown-menu{
+display:block;
+}
+
+.dropdown-menu li{
+padding:8px 15px;
+}
+
+.dropdown-menu li:hover{
+background:#222;
+}
+
+/* ===== MOVIE GRID ===== */
+.movies{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+padding:40px;
+}
+
+.card{
+position:relative;
+background:#111;
+border-radius:10px;
+overflow:hidden;
+cursor:pointer;
+transition:0.3s;
+}
+
+.card img{
+width:100%;
+aspect-ratio:2/3;
+object-fit:cover;
+transition:0.4s ease;
+}
+
+/* Zoom effect */
+.card:hover{
+transform:scale(1.1);
+}
+
+.card h3{
+margin:15px 0;
+}
+
+/* ===== BUTTONS ===== */
+.btn{
+background:linear-gradient(90deg,#00ff88,#00ff0d);
+border:none;
+padding:8px 12px;
+margin:5px;
+cursor:pointer;
+color:black;
+font-weight:bold;
+border-radius:6px;
+}
+
+.btn:hover{
+opacity:0.85;
+}
+
+/* ===== FOOTER ===== */
+footer{
+background:#0b0b0b;
+color:#ccc;
+padding-top:60px;
+margin-top:60px;
+}
+
+.footer-container{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:40px;
+padding:0 60px 40px 60px;
+}
+
+.footer-section h3,
+.footer-section h4{
+color:#00ff88;
+margin-bottom:20px;
+}
+
+.footer-section p{
+font-size:14px;
+line-height:1.6;
+}
+
+.footer-section ul{
+list-style:none;
+padding:0;
+margin:0;
+}
+
+.footer-section ul li{
+margin-bottom:10px;
+}
+
+.footer-section a{
+color:#aaa;
+text-decoration:none;
+}
+
+.footer-section a:hover{
+color:#00ff88;
+}
+
+.footer-bottom{
+text-align:center;
+padding:20px;
+border-top:1px solid #222;
+font-size:14px;
+color:#777;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav class="main-nav">
+
+<a href="index.html" class="logo-container">
+<img src="logo.jpg">
+<h1>Movies Online</h1>
+</a>
+
+<ul class="nav-links">
+<li><a href="index.html">HOME</a></li>
+<li><a href="bollywood.html">HINDI</a></li>
+<li><a href="#" class="active">TELUGU</a></li>
+<li><a href="tamil.html">TAMIL</a></li>
+<li><a href="malayalam.html">MALAYALAM</a></li>
+<li><a href="hollywood.html">ENGLISH</a></li>
+<li><a href="kannada.html">KANNADA</a></li>
+
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="movies">
+
+<div class="card">
+<img src="images/rrr.jpg" alt="RRR">
+<h3>RRR (2022)</h3>
+<a href="trailers/rrr_trailer.mp4"><button class="btn">Trailer</button></a>
+<a href="https://www.zee5.com/movies/details/rrr/0-0-1z5145092?utm_source=google_web&utm_medium=watchaction&utm_campaign=google_watch&utm_content=rrr"><button class="btn">Full Movie</button></a>
+</div>
+
+<div class="card">
+<img src="images/baahubali.jpg" alt="Baahubali">
+<h3>Baahubali: The Beginning (2015)</h3>
+<a href="trailers/baahubali_trailer.mp4"><button class="btn">Trailer</button></a>
+<a href="https://www.hotstar.com/in/movies/baahubali--the-beginning/1000074338?utm_source=gwa"><button class="btn">Full Movie</button></a>
+</div>
+
+<div class="card">
+<img src="images/salaar.jpg" alt="Salaar">
+<h3>Salaar: Part 1 – Ceasefire (2023)</h3>
+<a href="trailers/salaar_trailer.mp4"><button class="btn">Trailer</button></a>
+<a href="https://www.netflix.com/watch/81727155?source=35"><button class="btn">Full Movie</button></a>
+</div>
+
+<div class="card">
+<img src="images/og.jpg" alt="They Call Him OG">
+<h3>They Call Him OG (2025)</h3>
+<a href="trailers/They_Call_Him_OG_trailer.mp4"><button class="btn">Trailer</button></a>
+<a href="https://www.netflix.com/watch/81902063?source=35"><button class="btn">Full Movie</button></a>
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-container">
+
+<div class="footer-section">
+<h3>Movies Online</h3>
+<p>Your destination for streaming Telugu, Hindi, Tamil, Malayalam, Kannada and English movies.</p>
+</div>
+
+<div class="footer-section">
+<h4>Languages</h4>
+<ul>
+<li><a href="bollywood.html">Hindi</a></li>
+<li><a href="telugu.html">Telugu</a></li>
+<li><a href="tamil.html">Tamil</a></li>
+<li><a href="malayalam.html">Malayalam</a></li>
+<li><a href="kannada.html">Kannada</a></li>
+<li><a href="hollywood.html">English</a></li>
+</ul>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Movies Online. All Rights Reserved.
+</div>
+
+</footer>
+
+</body>
+</html>

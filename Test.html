@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coolie (2025)</title>
+
+<style>
+
+/* ===== BODY ===== */
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:#000;
+color:white;
+}
+
+/* ===== HEADER ===== */
+header{
+background:#111;
+padding:15px 40px;
+box-shadow:0 3px 10px rgba(0,0,0,0.6);
+}
+
+.main-nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+width:100%;
+}
+
+.logo-container{
+display:flex;
+align-items:center;
+gap:10px;
+text-decoration:none;
+}
+
+.logo-container img{
+height:40px;
+width:80px;
+border-radius:60px;
+}
+
+.logo-container h1{
+background: linear-gradient(90deg, #00ff88, #00ff0d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block
+}
+
+/* ===== MOVIE SECTION ===== */
+.movie-container{
+display:flex;
+flex-wrap:wrap;
+gap:40px;
+padding:60px;
+align-items:center;
+justify-content:center;
+}
+
+.movie-poster img{
+width:300px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.7);
+}
+
+.movie-details{
+max-width:500px;
+}
+
+.movie-details h2{
+font-size:32px;
+margin-bottom:15px;
+}
+
+.movie-details p{
+color:#ccc;
+line-height:1.6;
+margin-bottom:20px;
+}
+
+.btn{
+background:linear-gradient(90deg,#00ff88,#00ff0d);
+border:none;
+padding:10px 15px;
+margin:5px;
+cursor:pointer;
+color:black;
+font-weight:bold;
+border-radius:6px;
+}
+
+.btn:hover{
+opacity:0.85;
+}
+
+/* ===== FOOTER ===== */
+footer{
+background:#0b0b0b;
+color:#ccc;
+padding:40px;
+text-align:center;
+margin-top:60px;
+border-top:1px solid #222;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav class="main-nav">
+<a href="index.html" class="logo-container">
+<img src="logo.jpg">
+<h1>Movies Online</h1>
+</a>
+</nav>
+</header>
+
+<section class="movie-container">
+
+<div class="movie-poster">
+<img src="images/coolie.jpg" alt="Coolie">
+</div>
+
+<div class="movie-details">
+<h2>Coolie (2025)</h2>
+<p>
+An upcoming high-octane action entertainer starring Rajinikanth, directed by Lokesh Kanagaraj. 
+The film promises mass action sequences, intense drama, and stylish storytelling.
+</p>
+
+<a href="trailers/coolie_trailer.mp4">
+<button class="btn">Watch Trailer</button>
+</a>
+
+<a href="https://drive.google.com/file/d/10vMhN9j9Jgjxapw-9rLFCeCciqE_eXF3/view?usp=drive_link">
+<button class="btn">Full Movie</button>
+</a>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Movies Online. All Rights Reserved.
+</footer>
+
+</body>
+</html>

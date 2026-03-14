@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movies Online</title>
+
+<style>
+
+/* ===== BODY ===== */
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:linear-gradient(135deg,#000,#0f2027,#203a43);
+color:white;
+}
+
+/* ===== HEADER ===== */
+header{
+background:rgba(0,0,0,0.85);
+padding:15px 40px;
+box-shadow:0 3px 10px rgba(0,0,0,0.6);
+}
+
+.main-nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+width:100%;
+}
+
+.logo-container{
+display:flex;
+align-items:center;
+gap:10px;
+text-decoration:none;
+}
+
+.logo-container img{
+height:40px;
+width:80px;
+border-radius:60px;
+}
+
+.logo-container h1{
+background: linear-gradient(90deg, #00ff88, #00ff0d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block
+}
+
+/* ===== NAV LINKS ===== */
+.nav-links{
+list-style:none;
+display:flex;
+gap:25px;
+margin:0;
+padding:0;
+align-items:center;
+}
+
+.nav-links li{
+position:relative;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#ccc;
+font-size:14px;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#00ff88;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown-menu{
+display:none;
+position:absolute;
+top:30px;
+left:0;
+background:#111;
+list-style:none;
+padding:10px 0;
+border-radius:6px;
+min-width:130px;
+box-shadow:0 5px 15px rgba(0,0,0,0.5);
+}
+
+.dropdown:hover .dropdown-menu{
+display:block;
+}
+
+.dropdown-menu li{
+padding:8px 15px;
+}
+
+.dropdown-menu li:hover{
+background:#222;
+}
+
+/* ===== GENRE SECTION ===== */
+.genres{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+padding:60px;
+}
+
+.genre-card{
+background:#111;
+padding:40px;
+text-align:center;
+border-radius:12px;
+font-size:20px;
+transition:0.3s;
+cursor:pointer;
+box-shadow:0 4px 15px rgba(0,0,0,0.5);
+}
+
+.genre-card:hover{
+transform:scale(1.1);
+background:linear-gradient(90deg,#00ff88,#00ff0d);
+color:black;
+}
+
+a{
+text-decoration:none;
+color:white;
+}
+
+/* ===== MOVIES SECTION ===== */
+.movies{
+padding:40px 60px;
+}
+
+.movies h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+.movie-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.card{
+position:relative;
+background:#111;
+border-radius:10px;
+overflow:hidden;
+cursor:pointer;
+transition:0.3s;
+}
+
+.card img{
+width:100%;
+aspect-ratio:2/3;
+object-fit:cover;
+transition:0.4s ease;
+}
+
+/* Zoom effect */
+.card:hover {
+transform:scale(1.1);
+}
+
+.card h3{
+margin:15px 0;
+}
+
+.btn{
+background:linear-gradient(90deg,#00ff88,#00ff0d);
+border:none;
+padding:8px 12px;
+margin:5px;
+cursor:pointer;
+color:black;
+font-weight:bold;
+border-radius:6px;
+}
+
+.btn:hover{
+opacity:0.85;
+}
+
+/* ===== FOOTER ===== */
+footer{
+background:#0d0d0d;
+color:#ccc;
+padding-top:50px;
+margin-top:50px;
+}
+
+.footer-container{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:40px;
+padding:0 50px 40px 50px;
+}
+
+.footer-section h3,
+.footer-section h4{
+color:#00ff88;
+margin-bottom:15px;
+}
+
+.footer-section p{
+font-size:14px;
+line-height:1.6;
+}
+
+.footer-section ul{
+list-style:none;
+padding:0;
+margin:0;
+}
+
+.footer-section ul li{
+margin-bottom:10px;
+}
+
+.footer-section a{
+color:#aaa;
+font-size:14px;
+}
+
+.footer-section a:hover{
+color:#00ff88;
+}
+
+.socials{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.footer-bottom{
+text-align:center;
+padding:20px;
+border-top:1px solid #222;
+font-size:13px;
+color:#777;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav class="main-nav">
+
+<a href="indexMovies.html" class="logo-container">
+<img src="logo.jpg">
+<h1>Movies Online</h1>
+</a>
+
+<ul class="nav-links">
+<li><a href="indexMovies.html">HOME</a></li>
+<li><a href="bollywood.html">HINDI</a></li>
+<li><a href="telugu.html">TELUGU</a></li>
+<li><a href="tamil.html">TAMIL</a></li>
+<li><a href="malayalam.html">MALAYALAM</a></li>
+<li><a href="hollywood.html">ENGLISH</a></li>
+<li><a href="kannada.html">KANNADA</a></li>
+<li><a href="Test.html">Test</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- ===== LANGUAGE CARDS ===== -->
+<section class="genres">
+
+<a href="bollywood.html"><div class="genre-card">HINDI</div></a>
+<a href="hollywood.html"><div class="genre-card">ENGLISH</div></a>
+<a href="telugu.html"><div class="genre-card">TELUGU</div></a>
+<a href="tamil.html"><div class="genre-card">TAMIL</div></a>
+<a href="malayalam.html"><div class="genre-card">MALAYALAM</div></a>
+<a href="kannada.html"><div class="genre-card">KANNADA</div></a>
+
+</section>
+
+<!-- ===== FEATURED MOVIES ===== -->
+<section class="movies">
+
+<h2>🔥 Featured Movies</h2>
+
+<div class="movie-grid">
+
+<div class="card">
+<img src="images/rrr.jpg">
+<h3>RRR</h3>
+<a href="trailers/rrr_trailer.mp4"><button class="btn">Trailer</button></a>
+</div>
+
+<div class="card">
+<img src="images/kgf2.jpg">
+<h3>KGF Chapter 2</h3>
+<a href="trailers/kgf2_trailer.mp4"><button class="btn">Trailer</button></a>
+</div>
+
+<div class="card">
+<img src="images/endgame.jpg">
+<h3>Avengers: Endgame</h3>
+<a href="trailers/endgame_trailer.mp4"><button class="btn">Trailer</button></a>
+</div>
+
+<div class="card">
+<img src="images/dangal.jpg">
+<h3>Dangal</h3>
+<a href="trailers/dangal_trailer.mp4"><button class="btn">Trailer</button></a>
+</div>
+
+<div class="card">
+<img src="images/kantara.jpg">
+<h3>Kantara</h3>
+<a href="trailers/kantara_trailer.mp4"><button class="btn">Trailer</button></a>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-container">
+
+<div class="footer-section">
+<h3>Movies Online</h3>
+<p>Your destination for streaming Telugu,Tamil, Hindi, Malayalam, Kannada and English movies.</p>
+</div>
+
+<div class="footer-section">
+<h4>Languages</h4>
+<ul>
+<li><a href="bollywood.html">Hindi</a></li>
+<li><a href="telugu.html">Telugu</a></li>
+<li><a href="tamil.html">Tamil</a></li>
+<li><a href="malayalam.html">Malayalam</a></li>
+<li><a href="hollywood.html">English</a></li>
+<li><a href="kannada.html">Kannada</a></li>
+</ul>
+</div>
+
+<div class="footer-section">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="indexMovies.html">Home</a></li>
+<li><a href="#">Trending</a></li>
+<li><a href="Contact.html">Contact</a></li>
+<li><a href="Portfolio.html">Portfolio</a></li>
+
+</ul>
+</div>
+
+<div class="footer-section">
+<h4>Follow Us</h4>
+<div class="socials">
+<a href="#">Facebook</a>
+<a href="#">Instagram</a>
+</div>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Movies Online. All Rights Reserved.
+</div>
+
+</footer>
+
+</body>
+</html>
